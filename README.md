@@ -30,8 +30,6 @@ It reduces manual legal review effort by automatically identifying high-risk cla
 
 
 
-
-
 \## 🏛 System Architecture
 
 
@@ -63,8 +61,6 @@ flowchart TD
 &nbsp;   G --> H\[Structured JSON Output]
 
 &nbsp;   H --> I\[API / App Layer]
-
----
 
 
 
