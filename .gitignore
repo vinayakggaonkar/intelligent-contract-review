@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+venv/
+.env/
+
+# Models (DO NOT push large model weights)
+models/legalbert_4class/pytorch_model.bin
+models/legalbert_4class/model.safetensors
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
