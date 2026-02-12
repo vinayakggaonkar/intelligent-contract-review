@@ -30,6 +30,52 @@ It reduces manual legal review effort by automatically identifying high-risk cla
 
 
 
+
+
+\## 🏛 System Architecture
+
+
+
+```mermaid
+
+flowchart TD
+
+
+
+A\[Raw Contract Text] --> B\[spaCy Sentence Segmentation]
+
+
+
+B --> C\[LegalBERT 4-Class Classifier]
+
+C --> D{Clause Type}
+
+
+
+D -->|Financial| E\[Send to OpenAI LLM]
+
+D -->|Liability| E
+
+D -->|Termination| E
+
+D -->|Other| F\[Discard]
+
+
+
+E --> G\[Risk Summarization]
+
+G --> H\[Structured JSON Output]
+
+
+
+H --> I\[API / App Layer]
+
+
+
+---
+
+
+
 \## 🧠 Model Architecture
 
 
