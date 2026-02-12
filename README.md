@@ -62,7 +62,11 @@ flowchart TD
 
 &nbsp;   H --> I\[API / App Layer]
 
+```
 
+
+
+---
 
 
 
@@ -70,7 +74,7 @@ flowchart TD
 
 
 
-\### 1️⃣ Clause Classification Layer
+\### Clause Classification Layer
 
 \- Model: `nlpaueb/legal-bert-base-uncased`
 
@@ -90,9 +94,9 @@ flowchart TD
 
 
 
-\### 2️⃣ Risk Analysis Layer
+\### Risk Analysis Layer
 
-\- Model: OpenAI GPT (gpt-4o-mini)
+\- Model: OpenAI GPT (`gpt-4o-mini`)
 
 \- Generates:
 
@@ -160,6 +164,8 @@ Average Weighted F1: \*\*0.95\*\*
 
 
 
+```
+
 intelligent-contract-review/
 
 │
@@ -168,17 +174,17 @@ intelligent-contract-review/
 
 ├── models/
 
-│ └── legalbert\_4class/
+│   └── legalbert\_4class/
 
 │
 
 ├── src/
 
-│ ├── inference.py
+│   ├── inference.py
 
-│ ├── summarizer.py
+│   ├── summarizer.py
 
-│ └── pipeline.py
+│   └── pipeline.py
 
 │
 
@@ -187,6 +193,8 @@ intelligent-contract-review/
 ├── requirements.txt
 
 └── README.md
+
+```
 
 
 
@@ -220,17 +228,67 @@ intelligent-contract-review/
 
 ]
 
-
-
-👤 Author
+```
 
 
 
-Vinayak G Gaonkar
+---
 
-Master’s in Data Science
+
+
+\## 🔧 Installation
+
+
+
+```bash
+
+pip install -r requirements.txt
+
+python -m spacy download en\_core\_web\_sm
+
+```
+
+
+
+Set your OpenAI API key:
+
+
+
+```bash
+
+setx OPENAI\_API\_KEY "your\_api\_key\_here"
+
+```
+
+
+
+---
+
+
+
+\## ▶️ Run Locally
+
+
+
+```bash
+
+python app.py
+
+```
+
+
+
+---
+
+
+
+\## 👤 Author
+
+
+
+Vinayak G Gaonkar  
+
+Master’s in Data Science  
 
 AI / NLP / Generative AI Engineer
-
-
 
