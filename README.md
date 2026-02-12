@@ -40,37 +40,29 @@ It reduces manual legal review effort by automatically identifying high-risk cla
 
 flowchart TD
 
+&nbsp;   A\[Raw Contract Text] --> B\[spaCy Sentence Segmentation]
 
+&nbsp;   B --> C\[LegalBERT 4-Class Classifier]
 
-A\[Raw Contract Text] --> B\[spaCy Sentence Segmentation]
-
-
-
-B --> C\[LegalBERT 4-Class Classifier]
-
-C --> D{Clause Type}
+&nbsp;   C --> D{Clause Type}
 
 
 
-D -->|Financial| E\[Send to OpenAI LLM]
+&nbsp;   D -->|Financial| E\[Send to OpenAI LLM]
 
-D -->|Liability| E
+&nbsp;   D -->|Liability| E
 
-D -->|Termination| E
+&nbsp;   D -->|Termination| E
 
-D -->|Other| F\[Discard]
-
-
-
-E --> G\[Risk Summarization]
-
-G --> H\[Structured JSON Output]
+&nbsp;   D -->|Other| F\[Discard Clause]
 
 
 
-H --> I\[API / App Layer]
+&nbsp;   E --> G\[Risk Summarization]
 
+&nbsp;   G --> H\[Structured JSON Output]
 
+&nbsp;   H --> I\[API / App Layer]
 
 ---
 
